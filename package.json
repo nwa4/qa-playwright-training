@@ -1,0 +1,29 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  
+  "scripts": {
+    "runAllTests": "npx playwright test --config=playwright.config.ts",
+    "runUITests": "npx playwright test --config=playwright.config.ts --ui",
+    "runSmokeTests": "npx playwright test --config=playwright.config.ts --grep @smoke",
+    "runRegressionTests": "npx playwright test --config=playwright.config.ts --grep @regression",
+    "runE2ETests": "npx playwright test --config=playwright.config.ts --grep @e2e",
+    "runVisualTests": "npx playwright test --config=playwright.config.ts --grep @visual",
+    "runAPI": "npx playwright test --config=playwright.config.ts --grep @api",
+    "runUnitTests": "npx playwright test --config=playwright.config.ts --grep @unit",
+    "runPerformanceTests": "npx playwright test --config=playwright.config.ts --grep @performance",
+    "runSecurityTests": "npx playwright test --config=playwright.config.ts --grep @security",
+    "runAccessibilityTests": "npx playwright test --config=playwright.config.ts --grep @accessibility",
+    "runAllTestsWithTags": "npx playwright test --config=playwright.config.ts --grep @smoke || @regression || @e2e || @visual || @api || @unit || @performance || @security || @accessibility",
+    "runAllTestsWithTagsAndSkip": "npx playwright test --config=playwright.config.ts --grep @smoke && @regression && @e2e && @visual && @api && @unit && @performance && @security && @accessibility"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.54.1",
+    "@types/node": "^24.0.13"
+  }
+}
